@@ -1,5 +1,3 @@
-const HTTPS_PORT = 3000;
-
 import app from './app';
 import * as https from 'https';
 import * as http from 'http';
@@ -12,4 +10,4 @@ const httpsOptions = {
 
 https
   .createServer(httpsOptions, app)
-  .listen(HTTPS_PORT, () => console.log(`server runing on ${HTTPS_PORT}`));
+  .listen(3005);

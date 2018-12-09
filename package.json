@@ -7,7 +7,7 @@
     "test": "mocha -r ts-node/register ./src/**/*.test.ts --timeout 10000 --exit",
     "start": "nodemon --exec ts-node ./src/server.ts",
     "tslint": "tslint  -p .",
-    "start-prod": "node ./dist/server.js",
+    "start-prod": "node ./build/server.js",
     "start-docker": "docker-compose up -d --build",
     "build": "webpack",
     "preprod": "npm run tslint",

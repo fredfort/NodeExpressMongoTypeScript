@@ -2,6 +2,8 @@ const path = require('path')
 const nodeExternals = require('webpack-node-externals');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
+const buildFolder = path.resolve(__dirname, 'build')
+
 module.exports = {
   mode: 'production',
   target: "node",
@@ -11,7 +13,7 @@ module.exports = {
   },
   output: {
     filename: 'server.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: buildFolder
   },
   externals: [nodeExternals()],
   module:{
@@ -24,6 +26,6 @@ module.exports = {
     ]
   },
   plugins:[
-    new CleanWebpackPlugin(path.join(__dirname, 'dist'),)
+    new CleanWebpackPlugin(buildFolder)
   ]
 }
